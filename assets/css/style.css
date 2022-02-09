@@ -7,9 +7,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 /* header styling */
+
+
 header {
     padding: 50px 45px;
+    background-image: url("spongebob.jpeg");
     background-color: #AC714A;
+    width:100%;
+    height: auto;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bolder;
     
 }
 
