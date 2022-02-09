@@ -32,7 +32,9 @@ header a {
 /* section styling */
 
 section {
-    padding: 50px;
+    padding: 100px;
+    border-radius: 7px;
+    border-color: #fce138;
 }
 
 aside {
@@ -40,6 +42,12 @@ aside {
     margin: 40px 40px ;
     font-size: 26px;
     padding: 10px 10px;
+}
+
+/* div styling*/
+
+div {
+
 }
 
 /* footer styling */
