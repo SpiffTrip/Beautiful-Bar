@@ -1,5 +1,5 @@
 /* original script isnt working at the moment and i'm not sure if its due to the way i tried to write it, 
-so this is backup script I'm writing that follows the weather app layout. */
+so this is backup script I'm writing that follows the weather app layout i had made for challenge6. */
 var currentNewsEl = document.querySelector("#sportsnews");
 // below variable query selectors still need to be placed in the html,
 //  IF the original script doesnt work
@@ -8,7 +8,7 @@ var articleInfo = document.querySelector("#articles");
 var articleDescriptionEl = document.querySelector("#description");
 
 var getNews = function () {
-  var apiURL = `https://newsapi.org/v2/top-headlines?country=us&category=sports&pageSize=5&apiKey=1c26b2146af945b8a87bd5187e67421a`;
+  var apiURL = `https://newsdata.io/api/1/news?apikey=pub_44236e488244270aebb37a53e72007f32a7a&country=us&category=sports&page=1`;
 
   fetch(apiURL).then(function (response) {
     response.json().then(function (data) {
@@ -17,24 +17,24 @@ var getNews = function () {
   });
 };
 // display the news by article
-var displayNews = function (articles) {
+var displayNews = function (results) {
   articleContainerEl.textContent = "";
   articleInfo.textContent = "Latest Sports Headlines:";
 
-  var titles = articles.title;
-  for (var i = 5; i < articles.length; i = i + 8) {
+  var titles = results.title;
+  for (var i = 5; i < results.length; i = i + 8) {
     var latestTitles = titles[i];
 
     //image element
     var newsIcon = document.createElement("img");
     newsIcon.classList = "card-body text-center";
-    newsIcon.setAttribute("src" + response.articles[i].urlToImage);
+    newsIcon.setAttribute("src" + response.results[i].image_url);
 
     articleInfo.appendChild(newsIcon);
 
     var descriptionEl = document.createElement("span");
     descriptionEl.classList = "card-body text-center";
-    descriptionEl.textContent = articles.description;
+    descriptionEl.textContent = results.description;
 
     articleDescriptionEl.appendChild(descriptionEl);
   }
