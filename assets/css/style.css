@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* header styling */
+
+header {
+  padding: 50px 45px;
+  background-image: url("spongebob.jpeg");
+  background-color: #ac714a;
+  width: 100%;
+  height: auto;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+header ul li {
+  display: inline;
+  float: right;
+  margin: 8px 0;
+}
+header a {
+  text-decoration: none;
+  color: #fce138;
+  margin: 0 30px;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+/* section styling */
+
+section {
+  padding: 100px;
+}
+
+aside {
+  float: right;
+  margin: 40px 40px;
+  font-size: 26px;
+  padding: 10px 10px;
+}
+
+/* footer styling */
+
+footer {
+  width: 100%;
+  padding: 40px 45px;
+  background-color: #ac714a;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+
+footer p {
+  margin: 10px 10px;
+}
