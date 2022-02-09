@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -33,8 +31,6 @@ header a {
 
 section {
     padding: 100px;
-    border-radius: 7px;
-    border-color: #fce138;
 }
 
 aside {
@@ -44,11 +40,9 @@ aside {
     padding: 10px 10px;
 }
 
-/* div styling*/
 
-div {
 
-}
+
 
 /* footer styling */
 
@@ -57,4 +51,8 @@ footer {
     padding: 40px 45px;
     background-color: #AC714A;
     position: fixed;bottom: 0;left:0;right:0;height:30px;
+}
+
+footer p {
+    margin: 10px 10px;
 }
