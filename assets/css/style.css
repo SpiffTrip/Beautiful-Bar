@@ -54,7 +54,7 @@ div {
 
 footer {
     width: 100%;
-    padding: 50px 45px;
+    padding: 40px 45px;
     background-color: #AC714A;
-        
+    position: fixed;bottom: 0;left:0;right:0;height:30px;
 }
