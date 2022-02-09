@@ -1,27 +1,22 @@
 // super awesome javascript stuff here
 function sportsNews() {
   fetch(
-    "https://newsapi.org/v2/top-headlines?country=us&category=sports&pageSize=5&apiKey=1c26b2146af945b8a87bd5187e67421a"
+    "https://newsdata.io/api/1/news?apikey=pub_44236e488244270aebb37a53e72007f32a7a&country=us&category=sports&page=1"
   )
     .then((a) => a.json())
     .then((response) => {
-      for (var i = 0; i < response.articles.length; i++) {
+      for (var i = 0; i < response.results.length; i++) {
         document.getElementById("sportsnews").innerhtml +=
           "<div style='padding-top: 10px;'><img style: 'float: right; width: 150px;' src='" +
-          response.articles[i].urlToImage +
+          response.results[i].image_url +
           "'><h1>" +
-          response.articles[i].title +
+          response.results[i].title +
           "</h1>" +
-          response.articles[i].source.name +
+          response.results[i].source_id +
           "<br>" +
-          response.articles[i].description +
-          " <a href='" +
-          response.articles[i].url +
-          "'target='_blank'>" +
-          response.articles[i].url +
-          "</a></div>";
+          response.results[i].description;
       }
     });
 }
-onload = sportsNews();
+sportsNews();
 //
