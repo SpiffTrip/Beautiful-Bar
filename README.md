@@ -9,7 +9,7 @@ A great sports bar that takes user favorite food for submission!
 *CSS
 *jAVASCRIPT
 *PURECSS
-
+*TheMealDB API (for random food gen)
 ## Website
 https://spifftrip.github.io/Beautiful-Bar/
 
